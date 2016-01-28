@@ -21,15 +21,25 @@
             android:id="@+id/tvScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-    </LinearLayout> 
+    </LinearLayout>
 
-    <win.lihy.game2048.GameView
-
-        android:id="@+id/gameView"
+    <FrameLayout
+        android:id="@+id/gameContainer"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >
-    </win.lihy.game2048.GameView
->
+
+        <win.lihy.game2048.GameView
+            android:id="@+id/gameView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </win.lihy.game2048.GameView>
+
+        <win.lihy.game2048.MyAnimation
+            android:id="@+id/myAnimation"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </win.lihy.game2048.MyAnimation>
+    </FrameLayout>
 
 </LinearLayout>

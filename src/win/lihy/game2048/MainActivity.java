@@ -17,6 +17,7 @@ public class MainActivity extends Activity {
 	private TextView tvScore;
 	private static MainActivity mainActivity = null;
 	private int score = 0;// 计分器
+	private MyAnimation myAnimation = null;
 
 	public MainActivity() {
 		mainActivity = this;
@@ -26,7 +27,9 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
 		tvScore = (TextView) findViewById(R.id.tvScore);
+		myAnimation = (MyAnimation) findViewById(R.id.myAnimation);
 	}
 
 	@Override
@@ -52,5 +55,9 @@ public class MainActivity extends Activity {
 	public void addScore(int s) {
 		score += s;
 		showScore();
+	}
+
+	public MyAnimation getMyAnimation() {
+		return myAnimation;
 	}
 }

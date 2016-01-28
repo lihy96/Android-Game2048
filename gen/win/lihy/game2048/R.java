@@ -29,9 +29,11 @@ public final class R {
         public static final int icon=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0003;
+        public static final int action_settings=0x7f0a0005;
         public static final int container=0x7f0a0000;
-        public static final int gameView=0x7f0a0002;
+        public static final int gameContainer=0x7f0a0002;
+        public static final int gameView=0x7f0a0003;
+        public static final int myAnimation=0x7f0a0004;
         public static final int tvScore=0x7f0a0001;
     }
     public static final class layout {
