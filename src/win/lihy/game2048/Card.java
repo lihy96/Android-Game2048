@@ -23,6 +23,8 @@ public class Card extends FrameLayout {
 		label.setGravity(Gravity.CENTER);//让数字显示在中间，而不是左上角
 		label.setBackgroundColor(0x33ffffff);
 		
+		//label.setBackgroundDrawable(getResources().getDrawable(R.drawable.btn_shape));
+		
 		LayoutParams lp = new LayoutParams(-1, -1);
 		lp.setMargins(cardMargin, cardMargin, 0, 0);
 		addView(label,lp);
