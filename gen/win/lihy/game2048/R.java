@@ -56,8 +56,10 @@ public final class R {
         public static final int main=0x7f090000;
     }
     public static final class raw {
-        public static final int merge=0x7f040000;
-        public static final int move=0x7f040001;
+        public static final int background=0x7f040000;
+        public static final int bgr_music=0x7f040001;
+        public static final int merge=0x7f040002;
+        public static final int move=0x7f040003;
     }
     public static final class string {
         public static final int action_settings=0x7f060002;

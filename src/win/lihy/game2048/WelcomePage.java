@@ -22,16 +22,21 @@ public class WelcomePage extends Activity {
 	private ViewPager vp;
 	private ViewPagerAdapter vpAdapter;
 	private List<View> views;
-	private Button btnStart;
-
+	private Button btnStart,btnHighScore,btnAbout,btnQuit;
+	private MyAudio myAudio;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		
+		myAudio = new MyAudio(this);
+		
 		setContentView(R.layout.welcome_page);
+		
 		initViews();
-
+		
 		handler.sendEmptyMessageDelayed(0, 2000);
+		handler_audio.sendEmptyMessageDelayed(0, 500);
 	}
 
 	private void initViews() {
@@ -45,16 +50,40 @@ public class WelcomePage extends Activity {
 		vp.setAdapter(vpAdapter);
 
 		btnStart = (Button) views.get(1).findViewById(R.id.btnStart);
+		btnHighScore = (Button) views.get(1).findViewById(R.id.btnHighScore);
+		btnAbout = (Button) views.get(1).findViewById(R.id.btnAbout);
+		btnQuit = (Button) views.get(1).findViewById(R.id.btnQuit);
+		
+		
 		btnStart.setOnClickListener(new OnClickListener() {
-
 			public void onClick(View v) {
 				startActivity(new Intent(WelcomePage.this, MainActivity.class));
+				myAudio.stop(3);
 			}
 		});
-
+		
+		btnHighScore.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				
+			}
+		});
+		
+		btnAbout.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				
+			}
+		});
+		
+		btnQuit.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				finish();
+			}
+		});
+		
+		
 	}
 
-	private boolean isrunning = false;
+	private boolean isrunning = true;
 	private Handler handler = new Handler() {
 		public void handleMessage(android.os.Message msg) {
 			// 让ViewPager滑到下一页
@@ -70,9 +99,18 @@ public class WelcomePage extends Activity {
 			}
 		};
 	};
+	
+	private Handler handler_audio = new Handler() {
+		public void handleMessage(android.os.Message msg) {
+					myAudio.play(3);
+					handler_audio.sendEmptyMessageDelayed(0, Config.BACKGROUND_MUSIC_LENGTH_MS);		
+		};
+	};
 
 	protected void onDestroy() {
+		myAudio.stop(3);
 		super.onDestroy();
-		isrunning = false;
-	};
+	}
+
+
 }

@@ -30,28 +30,32 @@ public class GameView extends LinearLayout {
 
 	public GameView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-		initGameView();
 		initAudio(context);
+		initGameView();
+		
 	}
 
 	public GameView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		initGameView();
 		initAudio(context);
+		initGameView();
+		
 	}
 
 	public GameView(Context context) {
 		super(context);
-		initGameView();
 		initAudio(context);
+		initGameView();
+		
 	}
 
 	private void initAudio(Context context) {
 		m_context = context;
 		myAudio = new MyAudio(m_context);
 	}
-
+	
 	private void initGameView() {
+		
 
 		setOrientation(LinearLayout.VERTICAL);
 		setBackgroundColor(0xffbbada0);// 设置背景颜色的方法
@@ -244,7 +248,6 @@ public class GameView extends LinearLayout {
 			}
 
 		}
-		
 		//判断是否有数字的合并，从而确定应该播放1（merge），2（move）音乐
 		if(oldCardNumber == findCardNumber()){
 			myAudio.play(2);
