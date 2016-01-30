@@ -15,35 +15,31 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/score" 
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
+            android:text="@string/score"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
             android:id="@+id/tvScore"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" 
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-        
-        
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
         <TextView
-    
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
+            android:layout_height="wrap_content"
             android:text="@string/high_score"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-        
-        
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
         <TextView
             android:id="@+id/tvHighScore"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" 
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
+            android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
-    
-    
-     <Button
+
+    <Button
         android:id="@+id/btnRestart"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -67,11 +63,38 @@
             android:layout_height="fill_parent" >
         </win.lihy.game2048.MyAnimation>
     </FrameLayout>
-    
-      <TextView
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/str_below_game_view"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:background="#e0000000"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/game"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/game_name"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/author"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/author_name"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
 
 </LinearLayout>

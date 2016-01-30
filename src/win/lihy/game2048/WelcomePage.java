@@ -67,7 +67,8 @@ public class WelcomePage extends Activity {
 		
 		btnHighScore.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				
+				HighScore highScoreDialogHighScore = new HighScore(getWelcomePage());
+				highScoreDialogHighScore.show();
 			}
 		});
 		
