@@ -159,8 +159,11 @@ public class GameView extends LinearLayout {
 
 	}
 
-	private void startGame() {
-		MainActivity.getMainActivity().clearScore();
+	public void startGame() {
+		
+		MainActivity atyActivity = MainActivity.getMainActivity();
+		atyActivity.clearScore();//显示初始分数0
+		atyActivity.showHighScore();//显示此时最高分
 
 		for (int y = 0; y < Config.LINES; y++) {
 			for (int x = 0; x < Config.LINES; x++) {

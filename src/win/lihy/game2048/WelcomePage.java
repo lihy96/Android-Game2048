@@ -3,11 +3,14 @@ package win.lihy.game2048;
 import java.util.ArrayList;
 import java.util.List;
 
+import win.lihy.game2048.MainActivity;
+
 import android.R.bool;
 import android.R.integer;
 import android.app.Activity;
 import android.app.ActivityManager.RecentTaskInfo;
 import android.content.Intent;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
@@ -111,6 +114,26 @@ public class WelcomePage extends Activity {
 		myAudio.stop(3);
 		super.onDestroy();
 	}
-
-
+	
+	//*************************************************************
+	//方便子对象访问本页面
+	private static WelcomePage welcomePage = null;
+	public static WelcomePage getWelcomePage() {
+		return welcomePage;
+	}
+	public WelcomePage() {
+		welcomePage = this;
+	}
+	
+	//****************************************************************
+	//最高分
+	public static final String SP_KEY_BEST_SCORE = "bestScore";
+	public void saveBestScore(int s){
+		Editor e = getPreferences(MODE_PRIVATE).edit();
+		e.putInt(SP_KEY_BEST_SCORE, s);
+		e.commit();
+	}
+	public int getBestScore(){
+		return getPreferences(MODE_PRIVATE).getInt(SP_KEY_BEST_SCORE, 0);
+	}
 }

@@ -9,5 +9,8 @@
     <string name="str_HighScore">最高得分</string>
     <string name="str_aboutGame">关于游戏</string>
     <string name="str_quit">退出游戏</string>
+    <string name="high_score">High Score</string>
+    <string name="str_below_game_view">2048  作者 李昊阳</string>
+    <string name="restart">restart</string>
 
 </resources>

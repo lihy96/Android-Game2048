@@ -32,19 +32,21 @@ public final class R {
         public static final int two_background=0x7f020004;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a000c;
-        public static final int btnAbout=0x7f0a0009;
-        public static final int btnHighScore=0x7f0a0008;
-        public static final int btnQuit=0x7f0a000a;
-        public static final int btnStart=0x7f0a0007;
+        public static final int action_settings=0x7f0a000e;
+        public static final int btnAbout=0x7f0a000b;
+        public static final int btnHighScore=0x7f0a000a;
+        public static final int btnQuit=0x7f0a000c;
+        public static final int btnRestart=0x7f0a0003;
+        public static final int btnStart=0x7f0a0009;
         public static final int container=0x7f0a0000;
-        public static final int gameContainer=0x7f0a0002;
-        public static final int gameView=0x7f0a0003;
-        public static final int iv1=0x7f0a0005;
-        public static final int iv2=0x7f0a0006;
-        public static final int myAnimation=0x7f0a0004;
+        public static final int gameContainer=0x7f0a0004;
+        public static final int gameView=0x7f0a0005;
+        public static final int iv1=0x7f0a0007;
+        public static final int iv2=0x7f0a0008;
+        public static final int myAnimation=0x7f0a0006;
+        public static final int tvHighScore=0x7f0a0002;
         public static final int tvScore=0x7f0a0001;
-        public static final int viewPager=0x7f0a000b;
+        public static final int viewPager=0x7f0a000d;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -65,10 +67,13 @@ public final class R {
         public static final int action_settings=0x7f060002;
         public static final int app_name=0x7f060000;
         public static final int hello_world=0x7f060001;
+        public static final int high_score=0x7f060008;
+        public static final int restart=0x7f06000a;
         public static final int score=0x7f060003;
         public static final int startGame=0x7f060004;
         public static final int str_HighScore=0x7f060005;
         public static final int str_aboutGame=0x7f060006;
+        public static final int str_below_game_view=0x7f060009;
         public static final int str_quit=0x7f060007;
     }
     public static final class style {
