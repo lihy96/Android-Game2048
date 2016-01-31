@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -22,7 +23,7 @@ public class MainActivity extends Activity {
 	private static MainActivity mainActivity = null;
 	private int score = 0;// 计分器
 	private MyAnimation myAnimation = null;
-	
+	private LinearLayout linearLayout;
 
 	public MainActivity() {
 		mainActivity = this;
@@ -32,6 +33,10 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		
+		linearLayout = (LinearLayout) findViewById(R.id.container);
+		linearLayout.setBackgroundColor(0xffbbada0);
 		
 		
 		tvScore = (TextView) findViewById(R.id.tvScore);

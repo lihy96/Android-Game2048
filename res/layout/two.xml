@@ -7,9 +7,9 @@
         android:id="@+id/iv2"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/bg2" />
+        android:background="@drawable/index" />
 
-    <RelativeLayout
+   <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -69,13 +69,7 @@
                 android:textAppearance="?android:attr/textAppearanceSmallInverse" />
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="144dp"
-            android:layout_height="144dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/ic_launcher" />
+
     </RelativeLayout>
 
 </RelativeLayout>

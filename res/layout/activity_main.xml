@@ -39,11 +39,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnRestart"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/restart" />
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnRestart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/restart" />
+    </LinearLayout>
 
     <FrameLayout
         android:id="@+id/gameContainer"
