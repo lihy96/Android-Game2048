@@ -27,49 +27,55 @@
 
             <Button
                 android:id="@+id/btnStart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/welcome_button_style"
                 android:text="@string/startGame" />
+
+            <Space
+                android:layout_width="fill_parent"
+                android:layout_height="15dp" />
 
             <Button
                 android:id="@+id/btnHighScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/welcome_button_style"
                 android:text="@string/str_HighScore" />
+
+            <Space
+                android:layout_width="fill_parent"
+                android:layout_height="15dp" />
 
             <Button
                 android:id="@+id/btnAbout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/welcome_button_style"
                 android:text="@string/str_aboutGame" />
+
+            <Space
+                android:layout_width="fill_parent"
+                android:layout_height="15dp" />
 
             <Button
                 android:id="@+id/btnQuit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/welcome_button_style"
                 android:text="@string/str_quit" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="50dp" />
-            
+
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/welcome_page_below_str"
                 android:gravity="center"
+                android:text="@string/welcome_page_below_str"
                 android:textAppearance="?android:attr/textAppearanceSmallInverse" />
-
         </LinearLayout>
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_above="@+id/linearLayout1"
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="46dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/ic_launcher" />
-
     </RelativeLayout>
 
 </RelativeLayout>
