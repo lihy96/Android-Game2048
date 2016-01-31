@@ -5,6 +5,7 @@ import java.util.List;
 
 import win.lihy.game2048.MainActivity;
 
+
 import android.R.bool;
 import android.R.integer;
 import android.app.Activity;
@@ -27,18 +28,20 @@ public class WelcomePage extends Activity {
 	private List<View> views;
 	private Button btnStart,btnHighScore,btnAbout,btnQuit;
 	private MyAudio myAudio;
+	private Share share;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		myAudio = new MyAudio(this);
+		share = new Share(this);
 		
 		setContentView(R.layout.welcome_page);
 		
 		initViews();
 		
-		handler.sendEmptyMessageDelayed(0, 2000);
+		handler.sendEmptyMessageDelayed(0, Config.WELCOME_PIC_LENGTH);
 		handler_audio.sendEmptyMessageDelayed(0, 500);
 	}
 
@@ -75,6 +78,7 @@ public class WelcomePage extends Activity {
 		btnAbout.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				
+				share.showShare();
 			}
 		});
 		
@@ -99,7 +103,7 @@ public class WelcomePage extends Activity {
 			}
 			// 延时，循环调用handler
 			if (isrunning) {
-				handler.sendEmptyMessageDelayed(0, 2000);
+				handler.sendEmptyMessageDelayed(0, Config.WELCOME_PIC_LENGTH);
 			}
 		};
 	};

@@ -7,38 +7,69 @@
         android:id="@+id/iv2"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/two_background" />
+        android:background="@drawable/bg2" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:gravity="center_horizontal"
         android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/btnStart"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/startGame" />
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/btnHighScore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/str_HighScore" />
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/startGame" />
 
-        <Button
-            android:id="@+id/btnAbout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/str_aboutGame" />
+            <Button
+                android:id="@+id/btnHighScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_HighScore" />
 
-        <Button
-            android:id="@+id/btnQuit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/str_quit" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_aboutGame" />
+
+            <Button
+                android:id="@+id/btnQuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_quit" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+            
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_page_below_str"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_above="@+id/linearLayout1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="46dp"
+            android:background="@drawable/ic_launcher" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
